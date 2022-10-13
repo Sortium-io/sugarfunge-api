@@ -4,8 +4,13 @@ on:
     branches: [ IS-2-migrate-sugarfunge-api-docker-to-aws ]
 jobs:
     build-arm64:
-        runs-on: [ self-hosted, linux, ARM64 ]
+        runs-on: ubuntu-latest
         steps:
+        - name: Setup QEMU
+          uses: docker/setup-qemu-action@v2
+          with:
+            platforms: arm64
+
         - name: 'Checkout Github Action'
           uses: actions/checkout@main
 
