@@ -1,7 +1,7 @@
 name: DockerMultiplatformAWS
 on:
   push:
-    branches: [ IS-2-migrate-sugarfunge-api-docker-to-aws ]
+    branches: [ main ]
 jobs:
     build-arm64:
         runs-on: ubuntu-latest
